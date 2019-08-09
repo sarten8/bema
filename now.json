@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "alias": "bema",
-  "name": "bema",
+  "alias": "bernarda",
+  "name": "bernarda",
   "builds": [{ "src": "next.config.js", "use": "@now/next" }]
 }
