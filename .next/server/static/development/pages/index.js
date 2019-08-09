@@ -1209,7 +1209,8 @@ const myWorks = Object(_utils_works__WEBPACK_IMPORTED_MODULE_2__["default"])();
     lineNumber: 11
   },
   __self: undefined
-}, myWorks.map(work => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+}, myWorks.map((work, index) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  key: index,
   className: _styles_styles_css__WEBPACK_IMPORTED_MODULE_1___default.a.card,
   style: {
     backgroundImage: `url(${work.cover})`

@@ -9,8 +9,8 @@ export default () => (
       <p>::: work</p>
     </div>
     <div className={css.contentWork}>
-      {myWorks.map(work => (
-        <div className={css.card} style={{ backgroundImage: `url(${work.cover})` }}><span>{work.title}</span></div>
+      {myWorks.map((work, index) => (
+        <div key={index} className={css.card} style={{ backgroundImage: `url(${work.cover})` }}><span>{work.title}</span></div>
       ))}
     </div>
   </section>
