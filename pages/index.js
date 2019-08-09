@@ -8,10 +8,10 @@ export default function Index() {
   return (
     <Layout>
       <Head>
-        <meta charset="utf-8" />
         <link rel="shortcut icon" href="/static/triangle.png" />
         <title>b.</title>
         <meta
+          charset="utf-8"
           name="viewport"
           content="width=device-width, initial-scale=1"
           key="viewport"
