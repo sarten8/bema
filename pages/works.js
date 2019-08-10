@@ -10,7 +10,15 @@ export default () => (
     </div>
     <div className={css.contentWork}>
       {myWorks.map((work, index) => (
-        <div key={index} className={css.card} style={{ backgroundImage: `url(${work.cover})` }}><span>{work.title}</span></div>
+        <div
+          key={index}
+          className={css.card}
+          style={{ backgroundImage: `url(${work.cover})` }}
+        >
+          <div>
+            <span>{work.title}</span>
+          </div>
+        </div>
       ))}
     </div>
   </section>
