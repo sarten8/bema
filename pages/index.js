@@ -14,8 +14,7 @@ export default function Index() {
         <meta
           charSet="utf-8"
           name="viewport"
-          content="width=device-width, initial-scale=1"
-          key="viewport"
+          content="width=device-width, initial-scale=1.0"
         />
       </Head>
       <Home />
