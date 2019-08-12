@@ -95,6 +95,100 @@ body::-webkit-scrollbar {
   width: 20px;
 }
 
+.span1active {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  width: 30px;
+  border: 1px solid #ddd;
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+
+.span2active {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  width: 30px;
+  border: 1px solid #ddd;
+  transform: rotate(-45deg);
+  transition: 0.3s;
+}
+
+.icon:hover .span1active {
+  background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.3s;
+}
+
+.icon:hover .span2active {
+  background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.3s;
+}
+
+/* ----------   menu    ---------- */
+.menu {
+  position: fixed;
+  z-index: -20;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #050505e7;
+}
+
+.link {
+  align-self: flex-end;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  font-size: 32px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin: 0;
+  margin-right: 20px;
+  padding: 5px 0px 0 20px;
+  animation-name: moveLeft;
+  animation-duration: 1.5s;
+  background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.5s;
+}
+
+.link2 {
+  align-self: flex-end;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  font-size: 32px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin: 0;
+  margin-right: 20px;
+  padding: 5px 0px 0 20px;
+  animation-name: moveRight;
+  animation-duration: 1.5s;
+  background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.5s;
+}
+
+.link:hover,
+.link2:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to right, white 50%, #330867 80%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.5s;
+}
+
 /* ---------------------- HOME ---------------------- */
 .home {
   margin: 20px;
@@ -272,10 +366,18 @@ body::-webkit-scrollbar {
 }
 
 .about .goWorkContainer .arrow {
+  display: block;
   font-size: 48px;
   background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: 0.5s;
+}
+
+.about .goWorkContainer .arrow:hover {
+  /* transform: rotate(360deg); */
+  transition: 0.5s;
+  transform: scale(1.3);
 }
 
 .stars {
@@ -951,6 +1053,61 @@ body::-webkit-scrollbar {
   color: rgb(255, 255, 255);
 }
 
+/* ------------------------ CONTACT ------------------------ */
+
+.contact {
+  margin: 20px;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: right;
+}
+
+.contact span {
+  display: block;
+  margin-top: 10vh;
+  margin-left: 40px;
+  font-family: 'Open Sans';
+  font-weight: 100;
+  font-size: 16px;
+  color: tomato;
+}
+
+.contact p {
+  position: relative;
+  height: 80px;
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 1px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 50px;
+  margin-left: 30px;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: 8px;
+  color: #fff;
+  background: linear-gradient(
+    to right,
+    rgb(215, 223, 223) 0%,
+    #30cfd0 33%,
+    #330867 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.contact p:hover { 
+  transform: scale(1.1);
+  transition: 1s;
+}
+
 /* ---------------------- ANIMACIONES ---------------------- */
 
 @keyframes moveLeft {
@@ -992,7 +1149,7 @@ body::-webkit-scrollbar {
     -webkit-align-items: center;
     -ms-align-items: center;
   }
-  
+
   .about p {
     margin-left: 40px;
     font-family: 'Open Sans';
@@ -1002,7 +1159,7 @@ body::-webkit-scrollbar {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
+
   .about span {
     margin-left: 10px;
     font-family: 'Open Sans';
@@ -1019,7 +1176,7 @@ body::-webkit-scrollbar {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
+
   .about .goWorkContainer {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -1030,7 +1187,7 @@ body::-webkit-scrollbar {
     align-self: flex-end;
     cursor: pointer;
   }
-  
+
   .about .goWorkContainer .goWork {
     font-family: 'Open Sans';
     font-weight: 100;
@@ -1039,7 +1196,7 @@ body::-webkit-scrollbar {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
+
   .about .goWorkContainer .arrow {
     font-size: 36px;
     background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
@@ -1061,7 +1218,7 @@ body::-webkit-scrollbar {
     -webkit-align-items: center;
     -ms-align-items: center;
   }
-  
+
   .about p {
     margin-left: 40px;
     font-family: 'Open Sans';
@@ -1071,7 +1228,7 @@ body::-webkit-scrollbar {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
+
   .about span {
     margin-left: 10px;
     font-family: 'Open Sans';
@@ -1088,7 +1245,7 @@ body::-webkit-scrollbar {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
+
   .about .goWorkContainer {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -1099,7 +1256,7 @@ body::-webkit-scrollbar {
     align-self: flex-end;
     cursor: pointer;
   }
-  
+
   .about .goWorkContainer .goWork {
     font-family: 'Open Sans';
     font-weight: 100;
@@ -1108,7 +1265,7 @@ body::-webkit-scrollbar {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
+
   .about .goWorkContainer .arrow {
     font-size: 36px;
     background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);

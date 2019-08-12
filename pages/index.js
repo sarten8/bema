@@ -3,6 +3,7 @@ import Layout from '../components/MyLayout'
 import Home from './home'
 import About from './about'
 import Works from './works'
+import Contact from './contact'
 
 export default function Index() {
   return (
@@ -20,6 +21,7 @@ export default function Index() {
       <Home />
       <About />
       <Works />
+      <Contact />
     </Layout>
   )
 }

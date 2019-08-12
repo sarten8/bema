@@ -1,4 +1,3 @@
-import css from '../styles/styles.css'
 import Header from './Header'
 
 export default function Layout(props) {
