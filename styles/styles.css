@@ -1,33 +1,25 @@
-@font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans Regular'), local('OpenSans-Regular'),
-    url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2)
-      format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-
-* {
-  color: #ddd;
+*,
+::before,
+::after {
+  color: white;
   box-sizing: border-box;
 }
 
 html {
   margin: 0;
   padding: 0;
-  max-width: 1440px;
+  max-width: 100%;
   background-color: #050505;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  overflow-y: auto;
   overflow-x: hidden;
 }
 
 body {
   max-width: 100%;
-  margin: auto;
+  margin: 0;
   padding: 0;
+  font-family: 'Libre Baskerville', serif;
 }
 
 body::-webkit-scrollbar {
@@ -37,7 +29,9 @@ body::-webkit-scrollbar {
 /* ---------------------- HEADER ---------------------- */
 .header {
   margin: 0;
-  padding: 20px 50px;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -49,7 +43,6 @@ body::-webkit-scrollbar {
 }
 
 .logo {
-  font-family: 'Open Sans';
   font-size: 36px;
   font-weight: bold;
   text-decoration: none;
@@ -118,6 +111,7 @@ body::-webkit-scrollbar {
 
 .icon:hover .span1active {
   background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.3s;
@@ -125,6 +119,7 @@ body::-webkit-scrollbar {
 
 .icon:hover .span2active {
   background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.3s;
@@ -138,6 +133,7 @@ body::-webkit-scrollbar {
   height: 100%;
   top: 0;
   left: 0;
+  padding-right: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,94 +143,81 @@ body::-webkit-scrollbar {
 
 .link {
   align-self: flex-end;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Advent Pro', sans-serif;
   text-decoration: none;
-  font-size: 32px;
-  letter-spacing: 2px;
+  font-size: 28px;
+  letter-spacing: 1px;
   cursor: pointer;
   margin: 0;
   margin-right: 20px;
   padding: 5px 0px 0 20px;
   animation-name: moveLeft;
   animation-duration: 1.5s;
-  background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
+  background: linear-gradient(
+    to right,
+    #e6e1e1 30%,
+    rgb(197, 183, 183) 55%,
+    #382b2b 100%
+  );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.5s;
+  position: relative;
 }
 
 .link2 {
   align-self: flex-end;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Advent Pro', sans-serif;
   text-decoration: none;
-  font-size: 32px;
-  letter-spacing: 2px;
+  font-size: 28px;
+  letter-spacing: 1px;
   cursor: pointer;
   margin: 0;
   margin-right: 20px;
   padding: 5px 0px 0 20px;
   animation-name: moveRight;
   animation-duration: 1.5s;
-  background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
+  background: linear-gradient(
+    to right,
+    #e6e1e1 30%,
+    rgb(197, 183, 183) 55%,
+    #382b2b 100%
+  );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.5s;
+
 }
 
-.link:hover,
-.link2:hover {
-  transform: scale(1.1);
-  background: linear-gradient(to right, white 50%, #330867 80%, #330867 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.5s;
+.link:hover::after,
+.link2:hover::after  {
+  content: '<';
+  height: 1px;
+  width: 100%;
+  transition: 0.5s;
+  margin-left: 10px;
 }
+
 
 /* ---------------------- HOME ---------------------- */
 .home {
-  margin: 20px;
+  margin: 0 0 0 30px;
   padding: 20px;
   height: 100vh;
 }
 
 .dot {
   background-image: url(/static/pattern-dot-grid.svg);
-  background-size: 25px 25px;
-  opacity: 0.15;
+  background-size: 8px 10px;
+  opacity: 0.3;
   position: absolute;
   top: 30%;
-  right: 0;
-  bottom: 0;
-  left: 30%;
-}
-
-.pic {
-  background-color: #02182c;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-image: url(/static/background.jpg);
-  background-size: cover;
-  position: absolute;
-  top: 20%;
-  right: 0;
-  bottom: 0;
-  left: 50%;
-  animation-delay: 0.2s;
-  animation-duration: 1.5s;
-  animation-name: moveRight;
-  border-top-left-radius: 50px;
-}
-
-.pic::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #cf1767;
-  opacity: 0.2;
-  border-top-left-radius: 50px;
+  left: 40%;
+  right: 10%;
+  bottom: 30%;
+  border-top-right-radius: 50px;
 }
 
 .shadowOverlay {
@@ -243,13 +226,16 @@ body::-webkit-scrollbar {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.8;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.63) 0%, black 5%);
-  border-top-left-radius: 50px;
+  opacity: 0.5;
+  background: radial-gradient(
+    circle,
+    rgba(204, 17, 4, 0.719) 1px,
+    rgba(26, 25, 23, 0.4) 60%
+  );
 }
 
 .subContenedorHome {
-  height: 70vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -264,7 +250,7 @@ body::-webkit-scrollbar {
 }
 
 .welcome {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 42px;
   letter-spacing: 10px;
   margin: 0;
@@ -301,7 +287,12 @@ body::-webkit-scrollbar {
   margin-left: 20px;
   height: 1px;
   width: 40px;
-  background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
+  background: linear-gradient(
+    to right,
+    #2b0303 30%,
+    rgb(41, 8, 8) 55%,
+    #0a0000 100%
+  );
 }
 
 .introScrollLink:hover {
@@ -310,13 +301,15 @@ body::-webkit-scrollbar {
 
 /* ---------------------- ABOUT ---------------------- */
 .about {
-  margin: 20px;
+  margin: 0px;
   padding: 20px;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  background: #050505;
+  background-repeat: no-repeat;
 }
 
 .about p {
@@ -324,7 +317,9 @@ body::-webkit-scrollbar {
   font-family: 'Open Sans';
   font-weight: 100;
   font-size: 42px;
-  background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
+  /* background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%); */
+  background: white;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -335,25 +330,33 @@ body::-webkit-scrollbar {
   font-weight: 100;
   font-size: 18px;
   letter-spacing: 8px;
-  color: #fff;
   background: linear-gradient(
     to right,
     rgb(215, 223, 223) 0%,
     #30cfd0 33%,
     #330867 100%
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .about .goWorkContainer {
-  margin-top: 50px;
+  position: sticky;
+  top: 90vh;
+  right: 10%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   align-self: flex-end;
   cursor: pointer;
+  transition: 0.7s;
+}
+
+.about .goWorkContainer:hover {
+  transform: scale(1.1);
+  transition: 0.7s;
 }
 
 .about .goWorkContainer .goWork {
@@ -361,6 +364,7 @@ body::-webkit-scrollbar {
   font-weight: 100;
   font-size: 16px;
   background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -368,25 +372,26 @@ body::-webkit-scrollbar {
 .about .goWorkContainer .arrow {
   display: block;
   font-size: 48px;
-  background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
+  /* background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%); */
+  background: white;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.5s;
 }
 
-
 /* ---------------------- WORK ---------------------- */
 .work {
-  margin: 20px;
+  margin: 0px;
   padding: 20px;
   max-width: 100%;
-  height: 100vh;
+  height: auto;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  
+
   -webkit-display: flex;
   -webkit-flex-direction: column;
   -webkit-justify-content: flex-start;
@@ -396,6 +401,7 @@ body::-webkit-scrollbar {
   -ms-flex-direction: column;
   -ms-justify-content: flex-start;
   -ms-align-items: flex-start;
+
 }
 
 .work p {
@@ -481,8 +487,9 @@ body::-webkit-scrollbar {
 }
 
 .card div span {
-  font-family: 'Open Sans';
-  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
   color: rgb(255, 255, 255);
 }
 
@@ -503,7 +510,7 @@ body::-webkit-scrollbar {
   display: block;
   margin-top: 10vh;
   margin-left: 40px;
-  font-family: 'Open Sans';
+  font-family: 'Roboto', sans-serif;
   font-weight: 100;
   font-size: 16px;
   color: tomato;
@@ -519,7 +526,7 @@ body::-webkit-scrollbar {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 50px;
   margin-left: 30px;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   font-size: 32px;
   letter-spacing: 8px;
@@ -530,13 +537,14 @@ body::-webkit-scrollbar {
     #30cfd0 33%,
     #330867 100%
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 1s;
   cursor: pointer;
 }
 
-.contact p:hover { 
+.contact p:hover {
   transform: scale(1.1);
   transition: 1s;
 }
@@ -574,6 +582,10 @@ body::-webkit-scrollbar {
 /* ---------------------- RESPONSIVE ---------------------- */
 
 @media screen and (max-width: 600px) {
+  .work {
+    align-items: center;
+  }
+
   .contentWork {
     flex-direction: column;
     -webkit-flex-direction: column;
@@ -588,9 +600,6 @@ body::-webkit-scrollbar {
     font-family: 'Open Sans';
     font-weight: 100;
     font-size: 26px;
-    background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .about span {
@@ -599,15 +608,6 @@ body::-webkit-scrollbar {
     font-weight: 100;
     font-size: 12px;
     letter-spacing: 2px;
-    color: #fff;
-    background: linear-gradient(
-      to right,
-      rgb(215, 223, 223) 0%,
-      #30cfd0 33%,
-      #330867 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .about .goWorkContainer {
@@ -625,16 +625,10 @@ body::-webkit-scrollbar {
     font-family: 'Open Sans';
     font-weight: 100;
     font-size: 12px;
-    background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .about .goWorkContainer .arrow {
     font-size: 36px;
-    background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .welcome {
@@ -643,6 +637,10 @@ body::-webkit-scrollbar {
 }
 
 @media screen and (max-width: 500px) {
+  .work {
+    align-items: center;
+  }
+
   .contentWork {
     flex-direction: column;
     -webkit-flex-direction: column;
@@ -657,9 +655,6 @@ body::-webkit-scrollbar {
     font-family: 'Open Sans';
     font-weight: 100;
     font-size: 26px;
-    background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .about span {
@@ -668,15 +663,6 @@ body::-webkit-scrollbar {
     font-weight: 100;
     font-size: 12px;
     letter-spacing: 2px;
-    color: #fff;
-    background: linear-gradient(
-      to right,
-      rgb(215, 223, 223) 0%,
-      #30cfd0 33%,
-      #330867 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .about .goWorkContainer {
@@ -694,16 +680,10 @@ body::-webkit-scrollbar {
     font-family: 'Open Sans';
     font-weight: 100;
     font-size: 12px;
-    background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .about .goWorkContainer .arrow {
     font-size: 36px;
-    background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .welcome {

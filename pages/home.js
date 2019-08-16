@@ -4,9 +4,7 @@ import Link from 'next/link'
 export default () => (
   <div className={css.home} id="home">
     <div className={css.dot} />
-    <div className={css.pic}>
-      <div className={css.shadowOverlay} />
-    </div>
+    <div className={css.shadowOverlay} />
     <div className={css.subContenedorHome}>
       <div className={css.subContenedorHomeLetras}>
         <span className={css.welcome} style={{ animationDelay: '0.1s' }}>
