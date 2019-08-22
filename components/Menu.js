@@ -21,38 +21,28 @@ export default ({ menuStatus, menuActive }) => {
 
   return open ? (
     <div className={css.menu}>
-      <Link href="/">
-        <a
-          className={css.link}
-          onClick={_handleClick}
-        >
-          HOME
-        </a>
-      </Link>
-      <Link href="/#about">
-        <a
-          className={css.link2}
-          onClick={_handleClick}
-        >
-          ABOUT
-        </a>
-      </Link>
-      <Link href="/#work">
-        <a
-          className={css.link}
-          onClick={_handleClick}
-        >
-          WORK
-        </a>
-      </Link>
-      <Link href="/#contact">
-        <a
-          className={css.link2}
-          onClick={_handleClick}
-        >
-          CONTACT
-        </a>
-      </Link>
+      <div>
+        <Link href="/">
+          <a className={css.link} onClick={_handleClick}>
+            HOME
+          </a>
+        </Link>
+        <Link href="/#about">
+          <a className={css.link2} onClick={_handleClick}>
+            ABOUT
+          </a>
+        </Link>
+        <Link href="/#work">
+          <a className={css.link} onClick={_handleClick}>
+            WORK
+          </a>
+        </Link>
+        <Link href="/#contact">
+          <a className={css.link2} onClick={_handleClick}>
+            CONTACT
+          </a>
+        </Link>
+      </div>
     </div>
   ) : (
     ''

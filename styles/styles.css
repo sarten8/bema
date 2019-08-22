@@ -43,10 +43,9 @@ body::-webkit-scrollbar {
 }
 
 .logo {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: bold;
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 .logo:hover {
@@ -135,25 +134,30 @@ body::-webkit-scrollbar {
   left: 0;
   padding-right: 50px;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
   background: #050505e7;
 }
 
+.menu div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .link {
-  align-self: flex-end;
+  display: block;
+  overflow: hidden;
   font-family: 'Advent Pro', sans-serif;
   text-decoration: none;
   font-size: 28px;
   letter-spacing: 1px;
   cursor: pointer;
-  margin: 0;
-  margin-right: 20px;
-  padding: 5px 0px 0 20px;
+  margin: 10px;
   animation-name: moveLeft;
   animation-duration: 1.5s;
-  background: linear-gradient(
+  color: white;
+  /* background: linear-gradient(
     to right,
     #e6e1e1 30%,
     rgb(197, 183, 183) 55%,
@@ -161,24 +165,24 @@ body::-webkit-scrollbar {
   );
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
   transition: all 0.5s;
   position: relative;
 }
 
 .link2 {
-  align-self: flex-end;
+  display: block;
+  overflow: hidden;
   font-family: 'Advent Pro', sans-serif;
   text-decoration: none;
   font-size: 28px;
   letter-spacing: 1px;
   cursor: pointer;
-  margin: 0;
-  margin-right: 20px;
-  padding: 5px 0px 0 20px;
+  margin: 10px;
   animation-name: moveRight;
   animation-duration: 1.5s;
-  background: linear-gradient(
+  color: white;
+  /* background: linear-gradient(
     to right,
     #e6e1e1 30%,
     rgb(197, 183, 183) 55%,
@@ -186,52 +190,65 @@ body::-webkit-scrollbar {
   );
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.5s;
-
+  -webkit-text-fill-color: transparent; */
+  transition: all 0.5s ease;
+  position: relative;
 }
 
-.link:hover::after,
-.link2:hover::after  {
-  content: '<';
-  height: 1px;
+.link::before,
+.link2::before {
+  content: '';
+  transition: all 0.5s ease;
+  position: absolute;
+  background: radial-gradient(
+    circle,
+    rgba(204, 17, 4, 0.719) 1px,
+    rgba(26, 25, 23, 0.4) 60%
+  );
+  opacity: 0.8;
+  top: 50%;
+  left: 50%;
+  z-index: -2;
+  transition: all 0.5s ease;
   width: 100%;
-  transition: 0.5s;
-  margin-left: 10px;
+  height: 0%;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+.link:hover::before,
+.link2:hover::before {
+  height: 80%;
+}
 
 /* ---------------------- HOME ---------------------- */
 .home {
-  margin: 0 0 0 30px;
-  padding: 20px;
+  margin: 0 0 0 0;
+  padding-top: 40px;
+  padding-left: 50px;
   height: 100vh;
 }
 
 .dot {
-  background-image: url(/static/pattern-dot-grid.svg);
-  background-size: 8px 10px;
-  opacity: 0.3;
   position: absolute;
-  top: 30%;
-  left: 40%;
-  right: 10%;
-  bottom: 30%;
-  border-top-right-radius: 50px;
+  background: url(/static/background.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  top: 0; 
+  left: 0;
+  height: calc(100% + 55px);
+  width: 100%;
+  opacity: 0.3;
 }
 
 .shadowOverlay {
   position: absolute;
   top: 0;
   left: 0;
+  height: calc(100% + 55px);
   width: 100%;
-  height: 100%;
   opacity: 0.5;
-  background: radial-gradient(
-    circle,
-    rgba(204, 17, 4, 0.719) 1px,
-    rgba(26, 25, 23, 0.4) 60%
-  );
+  background: #050505;
+
 }
 
 .subContenedorHome {
@@ -250,9 +267,9 @@ body::-webkit-scrollbar {
 }
 
 .welcome {
-  font-family: 'Oswald', sans-serif;
-  font-size: 42px;
-  letter-spacing: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 58px;
   margin: 0;
   animation-duration: 1.5s;
   animation-name: moveLeft;
@@ -272,11 +289,12 @@ body::-webkit-scrollbar {
 
 .introScrollLink {
   display: inline-block;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.678);
   position: relative;
   padding-right: 5rem;
   font-size: 10px;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .introScrollLink::after {
@@ -296,28 +314,36 @@ body::-webkit-scrollbar {
 }
 
 .introScrollLink:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 /* ---------------------- ABOUT ---------------------- */
 .about {
   margin: 0px;
-  padding: 20px;
+  padding: 0px;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background: #050505;
-  background-repeat: no-repeat;
+}
+
+.about .imageBackground {
+  background: url(/static/background.png) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0.2;
 }
 
 .about p {
-  margin-left: 40px;
-  font-family: 'Open Sans';
+  margin-left: 100px;
+  margin-right: 40px;
+  font-family: 'Advent Pro', sans-serif;
   font-weight: 100;
-  font-size: 42px;
-  /* background: linear-gradient(to right, #ff8a00 30%, red 55%, #330867 100%); */
+  font-size: 40px;
   background: white;
   background-clip: text;
   -webkit-background-clip: text;
@@ -402,16 +428,17 @@ body::-webkit-scrollbar {
   -ms-justify-content: flex-start;
   -ms-align-items: flex-start;
 
+  border-radius: 10px;
 }
 
 .work p {
   display: block;
   margin-top: 10vh;
   margin-left: 40px;
-  font-family: 'Open Sans';
   font-weight: 100;
   font-size: 16px;
-  color: tomato;
+  font-family: 'Advent Pro', sans-serif;
+  color: rgba(187, 185, 184, 0.700);
 }
 
 .contentWork {
@@ -438,6 +465,7 @@ body::-webkit-scrollbar {
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
+
 }
 
 .card {
@@ -459,18 +487,18 @@ body::-webkit-scrollbar {
   background-position: top center;
   background-size: cover;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-  opacity: 0.5;
+  opacity: 0.9;
   transition-property: opacity, box-shadow;
-  transition-delay: 1s, 0;
-  transition-duration: 1s, 1s;
+  transition-delay: 0.5s, 0;
+  transition-duration: 0.5s, 0.5s;
 }
 
 .card:hover {
   opacity: 1;
   box-shadow: 0 0 50px 1px rgba(90, 89, 89, 0.351);
   transition-property: opacity, box-shadow;
-  transition-delay: 1s, 0;
-  transition-duration: 1s, 1s;
+  transition-delay: 0.5s, 0;
+  transition-duration: 0.5s, 0.5s;
 }
 
 .card div {
@@ -496,57 +524,91 @@ body::-webkit-scrollbar {
 /* ------------------------ CONTACT ------------------------ */
 
 .contact {
-  margin: 20px;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  text-align: right;
+  position: relative;
 }
 
-.contact span {
-  display: block;
-  margin-top: 10vh;
-  margin-left: 40px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-  font-size: 16px;
-  color: tomato;
+.contact .imageBackground {
+  background: url(/static/background2.png) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0.1;
+  z-index: -1;
 }
 
 .contact p {
-  position: relative;
-  height: 80px;
-  padding: 15px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 1px;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 50px;
-  margin-left: 30px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  font-size: 32px;
-  letter-spacing: 8px;
-  color: #fff;
-  background: linear-gradient(
-    to right,
-    rgb(215, 223, 223) 0%,
-    #30cfd0 33%,
-    #330867 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: 1s;
-  cursor: pointer;
+  display: block;
+  margin-top: 10vh;
+  margin-left: 40px;
+  font-weight: 100;
+  font-size: 16px;
+  font-family: 'Advent Pro', sans-serif;
+  color: rgba(187, 185, 184, 0.700);
 }
 
-.contact p:hover {
+.contact span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+  font-size: 16px;
+  font-family: 'Advent Pro', sans-serif;
+  color: rgba(187, 185, 184, 0.700);
+}
+
+.contact .social {
+  margin-top: 50px;
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact .social a {
+  padding: 0;
+  margin: 20px;
+  height: 180px;
+  width: 170px;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  border: 1px solid  rgba(187, 185, 184, 0.700);
+}
+
+
+.contact .social a div img {
+  margin-bottom: 1px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+
+}
+
+.contact .social a div span {
+  display: block;
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.contact .social a:hover {
   transform: scale(1.1);
-  transition: 1s;
+  transition: 0.5s;
 }
 
 /* ---------------------- ANIMACIONES ---------------------- */

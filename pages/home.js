@@ -8,21 +8,21 @@ export default () => (
     <div className={css.subContenedorHome}>
       <div className={css.subContenedorHomeLetras}>
         <span className={css.welcome} style={{ animationDelay: '0.1s' }}>
-          ART
+          DIRECCIÓN
         </span>
         <span className={css.welcome} style={{ animationDelay: '0.2s' }}>
-          DIRECTION
+          ARTE
         </span>
         <span className={css.welcome} style={{ animationDelay: '0.3s' }}>
-          SCENOGRAPHY
+          ESCENOGRAFÍA
         </span>
         <span className={css.welcome} style={{ animationDelay: '0.4s' }}>
-          DESIGN
+          DISEÑO
         </span>
       </div>
       <div className={css.introScroll}>
         <Link href="/#about">
-          <span className={css.introScrollLink}>Scroll For More</span>
+          <span className={css.introScrollLink}>Scroll +</span>
         </Link>
       </div>
     </div>

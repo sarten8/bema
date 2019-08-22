@@ -6,7 +6,7 @@ const myWorks = works()
 export default () => (
   <section className={css.work} id="work">
     <div>
-      <p>::: work</p>
+      <p>::: trabajos</p>
     </div>
     <div className={css.contentWork}>
       {myWorks.map((work, index) => (
