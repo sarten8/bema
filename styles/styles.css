@@ -235,17 +235,15 @@ body::-webkit-scrollbar {
 
 .dot {
   position: absolute;
-  background: url(/static/background.jpg) no-repeat center;
+  background: url(/static/background.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-attachment: fixed;
-  background-clip: border-box;
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
+  width: 100%; 
   opacity: 0.1;
 }
 
@@ -317,13 +315,11 @@ body::-webkit-scrollbar {
 }
 
 .about .imageBackground {
-  background: url(/static/background.png) no-repeat center;
+  background: url(/static/background.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-attachment: fixed;
-  background-clip: border-box;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -406,7 +402,7 @@ body::-webkit-scrollbar {
   width: 100%;
   max-width: 100%;
   min-height: 100vh;
-  background: #080808;
+  background: #050505;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -526,13 +522,11 @@ body::-webkit-scrollbar {
 }
 
 .contact .imageBackground {
-  background: url(/static/background2.png) no-repeat center;
+  background: url(/static/background2.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-attachment: fixed;
-  background-clip: border-box;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -541,7 +535,6 @@ body::-webkit-scrollbar {
 
 .contact p {
   display: block;
-  /* margin-top: 10vh; */
   margin-left: 40px;
   font-weight: 100;
   font-size: 16px;
