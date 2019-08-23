@@ -232,6 +232,10 @@ body::-webkit-scrollbar {
 .dot {
   position: absolute;
   background: url(/static/background.jpg) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  overflow: hidden;
   background-size: cover;
   background-attachment: fixed;
   top: 0;
@@ -267,6 +271,7 @@ body::-webkit-scrollbar {
   margin: 0;
   animation-duration: 1.5s;
   animation-name: moveLeft;
+  text-shadow: -1px 0px white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 /* .introScroll {
@@ -324,6 +329,10 @@ body::-webkit-scrollbar {
 
 .about .imageBackground {
   background: url(/static/background.png) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  overflow: hidden;
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
@@ -408,7 +417,7 @@ body::-webkit-scrollbar {
   width: 100%;
   max-width: 100%;
   min-height: 100vh;
-  background: #101010; 
+  background: #080808;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -520,9 +529,7 @@ body::-webkit-scrollbar {
 
 .contact {
   margin: 0;
-  padding: 20px;
-  width: 100%;
-  max-width: 100%;
+  padding: 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -531,6 +538,10 @@ body::-webkit-scrollbar {
 
 .contact .imageBackground {
   background: url(/static/background2.png) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  overflow: hidden;
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
