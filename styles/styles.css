@@ -243,7 +243,7 @@ body::-webkit-scrollbar {
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%; 
+  width: 100%;
   opacity: 0.1;
 }
 
@@ -661,6 +661,13 @@ body::-webkit-scrollbar {
 }
 
 /* ---------------------- RESPONSIVE ---------------------- */
+@media (max-width: 767px) {
+  .home .dot,
+  .about .imageBackground,
+  .contact .imageBackground {
+    background-attachment: fixed;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .work {
