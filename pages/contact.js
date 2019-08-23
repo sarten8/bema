@@ -9,8 +9,17 @@ export default () => (
     <div className={css.social}>
       <a href="https://www.instagram.com/suckthistangerine/" target="_blank">
         <div>
-          <img src="/static/icons/icons8-instagram-50.png" alt="" />
+          <img src="/static/icons/instagram.png" alt="" />
           <span>instagram</span>
+        </div>
+      </a>
+      <a
+        href="mailto:bernardafz@gmail.com"
+        target="_blank"
+      >
+        <div>
+          <img src="/static/icons/gmail.png" alt="" />
+          <span>gmail</span>
         </div>
       </a>
       <a
@@ -18,7 +27,7 @@ export default () => (
         target="_blank"
       >
         <div>
-          <img src="/static/icons/icons8-linkedin-50.png" alt="" />
+          <img src="/static/icons/linkedin.png" alt="" />
           <span>linkedIn</span>
         </div>
       </a>
