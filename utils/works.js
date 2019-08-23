@@ -6,8 +6,25 @@ import img05 from '../images/05.jpg'
 import img06 from '../images/06.jpg'
 import img07 from '../images/07.jpeg'
 import img08 from '../images/08.jpg'
+import img09 from '../images/09.jpg'
+import img10 from '../images/10.jpg'
+import img11 from '../images/11.jpg'
+import img12 from '../images/12.jpg'
+import img13 from '../images/13.jpg'
+import img14 from '../images/14.jpg'
 
 export default () => [
+  {
+    title: 'Vicenta',
+    abstract: 'Adaptación narrativa libre del corto Vincent, de Tim Burton. Fotonovela.',
+    place: '',
+    graph: 'B.',
+    projections: '',
+    scenography: '',
+    producer: '',
+    cityTime: 'Montevideo, 2014.',
+    cover: img09,
+  },
   {
     title: 'Trío Ibarburu “Ultramarino”',
     abstract: 'Presentación del disco Ultramarino del trío Ibarburu.',
@@ -95,6 +112,66 @@ export default () => [
     producer: 'N/A',
     cityTime: 'Montevideo, 2017.',
     cover: img08,
+  },
+  {
+    title: 'Nicolás Ibarburu “Casa Rodante”',
+    abstract: 'Presentación del disco Casa Rodante de Nicolás Ibarburu.',
+    place: 'Sala Zavala Muniz – Teatro Solís.',
+    graph: 'Guillermina Umpierrez / B.',
+    projections: '',
+    scenography: '/ B.',
+    photo: 'Javier Noceti / Pablo Delgado.',
+    producer: 'Fluir Management & Producción ',
+    cityTime: 'Montevideo, 2016.',
+    cover: img10,
+  },
+  {
+    title: 'Radio Palermo “De Paseo”',
+    abstract: 'Videoclip del single de Radio Palermo: “De Paseo”.',
+    place: '',
+    graph: 'Andrea Pomar / B.',
+    projections: '',
+    scenography: '/ B.',
+    photo: '',
+    producer: 'Fluir Management & Producción ',
+    cityTime: 'Montevideo, 2016.',
+    cover: img11,
+  },
+  {
+    title: 'Mural infantil',
+    abstract: 'Gigantografía de una ciudad cómic en pintura acrílica sobre madera.',
+    place: 'ASomma Fotografía.',
+    graph: '',
+    projections: '',
+    scenography: 'Mercedes Fernández / B.',
+    photo: '',
+    producer: 'Fluir Management & Producción ',
+    cityTime: 'Tala, 2017.',
+    cover: img12,
+  },
+  {
+    title: 'DVD Leo Carbajal',
+    abstract: 'DVD de Leo Carbajal / Trío con Gustavo Montemurro y Martín Ibarburu',
+    place: 'Estudio 4Tavella',
+    graph: '',
+    projections: '',
+    scenography: 'Andrea Pomar / B.',
+    photo: '',
+    producer: 'Producción: Cuatro+',
+    cityTime: 'Montevideo, 2016.',
+    cover: img13,
+  },
+  {
+    title: 'Samsung',
+    abstract: 'Publicidad heladeras Samsung',
+    place: 'Ignacio Rodríguez',
+    graph: '',
+    projections: '',
+    scenography: 'Andrea Pomar / B.',
+    photo: '',
+    producer: 'lalala',
+    cityTime: 'Montevideo, 2016.',
+    cover: img14,
   },
 ]
 
