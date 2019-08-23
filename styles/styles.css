@@ -238,9 +238,9 @@ body::-webkit-scrollbar {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  overflow: hidden;
   background-size: cover;
   background-attachment: fixed;
+  background-clip: border-box;
   top: 0;
   left: 0;
   height: 100%;
@@ -320,9 +320,9 @@ body::-webkit-scrollbar {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  overflow: hidden;
   background-size: cover;
   background-attachment: fixed;
+  background-clip: border-box;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -529,9 +529,9 @@ body::-webkit-scrollbar {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  overflow: hidden;
   background-size: cover;
   background-attachment: fixed;
+  background-clip: border-box;
   height: 100%;
   width: 100%;
   position: absolute;
