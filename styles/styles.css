@@ -23,15 +23,7 @@ body {
   font-family: 'Libre Baskerville', serif;
 }
 
-body::-o-scrollbar {
-  width: 0;
-}
-
-body::-ms-scrollbar {
-  width: 0;
-}
-
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 0;
 }
 
@@ -443,10 +435,14 @@ body::-webkit-scrollbar {
 .contact {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .contact .imageBackground {
@@ -462,49 +458,20 @@ body::-webkit-scrollbar {
   height: 100%;
   width: 100%;
   position: absolute;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 
-.contact p {
-  display: block;
-  margin-left: 40px;
-  font-weight: 100;
-  font-size: 16px;
-  font-family: 'Advent Pro', sans-serif;
-  color: rgba(187, 185, 184, 0.7);
-}
-
-.contact span {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-  font-size: 16px;
-  font-size: 16px;
-  font-family: 'Advent Pro', sans-serif;
-  /* color: rgba(187, 185, 184, 0.700); */
-  color: white;
-  transition: 0.44s;
-  transition-delay: 0.1s;
-}
-
-.contact .social {
-  margin-top: 20px;
-  width: 100%;
-  height: 40%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact .social a {
-  margin: 20px;
+.contact a {
+  margin-top: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
   height: 180px;
   width: 170px;
   border-radius: 30px;
   cursor: pointer;
   text-decoration: none;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
@@ -519,7 +486,7 @@ body::-webkit-scrollbar {
   transition: color 0.4s ease-in-out;
 }
 
-.contact .social a::before {
+.contact a::before {
   content: '';
   z-index: -1;
   position: absolute;
@@ -534,22 +501,20 @@ body::-webkit-scrollbar {
   transition: transform 0.45s ease-in-out;
 }
 
-.contact .social a div img {
+.contact a img {
   margin-bottom: 1px;
-  display: block;
   width: 50px;
   height: 50px;
-  border-radius: 10px;
 }
 
-.contact .social a div span {
+.contact a span {
   display: block;
   font-family: 'Advent Pro', sans-serif;
   font-size: 30px;
   font-weight: 100;
 }
 
-.contact .social a:hover::before {
+.contact a:hover::before {
   transform: translate3d(50%, -50%, 0) scale3d(30, 30, 30);
 }
 
@@ -634,6 +599,12 @@ body::-webkit-scrollbar {
   .welcome {
     font-size: 28px;
   }
+
+  .contact a {
+    height: 140px;
+    width: 130px;
+  }
+
 }
 
 @media screen and (max-width: 500px) {
