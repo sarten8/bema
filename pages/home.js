@@ -17,10 +17,8 @@ export default () => (
       <span className={css.welcome} style={{ animationDelay: '0.4s' }}>
         DISEÑO
       </span>
-    </div>
-    <div className={css.introScroll}>
+      <div className={css.introScroll}>
       <Link href="/#about">
-        {/* <span className={css.introScrollLink}>Scroll +</span> */}
         <span
           className={css.tcon_indicator}
           aria-label="scroll"
@@ -38,6 +36,7 @@ export default () => (
           </svg>
         </span>
       </Link>
+    </div>
     </div>
   </div>
 )

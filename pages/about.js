@@ -6,12 +6,7 @@ export default () => (
     <div className={css.imageBackground}></div>
     <p>B. / Lic. en Comunicación Social</p>
     <div className={css.goWorkContainer}>
-      {/* <Link href="/#work">
-        <span className={css.arrow}>&#8623;</span>
-      </Link> */}
-      <div className={css.introScroll}>
         <Link href="/#work">
-          {/* <span className={css.introScrollLink}>Scroll +</span> */}
           <span
             className={css.tcon_indicator}
             aria-label="scroll"
@@ -29,7 +24,6 @@ export default () => (
             </svg>
           </span>
         </Link>
-      </div>
     </div>
   </section>
 )
