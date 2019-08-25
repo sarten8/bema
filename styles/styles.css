@@ -246,7 +246,7 @@ body {
 .subContenedorHomeLetras {
   position: sticky;
   position: -webkit-sticky;
-  top: 10px;
+  top: 40px;
   display: flex;
   flex-direction: column;
 }
