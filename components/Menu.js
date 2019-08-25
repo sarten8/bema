@@ -29,17 +29,17 @@ export default ({ menuStatus, menuActive }) => {
         </Link>
         <Link href="/#about">
           <a className={css.link2} onClick={_handleClick}>
-            ABOUT
+            ACERCA DE
           </a>
         </Link>
         <Link href="/#work">
           <a className={css.link} onClick={_handleClick}>
-            WORK
+            TRABAJOS
           </a>
         </Link>
         <Link href="/#contact">
           <a className={css.link2} onClick={_handleClick}>
-            CONTACT
+            CONTACTO
           </a>
         </Link>
       </div>

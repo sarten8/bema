@@ -216,9 +216,20 @@ body {
 
 .dot {
   position: absolute;
-  background: url(/static/background.jpg) no-repeat center center fixed;
+  background: url(/static/background.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-repeat: no-repeat;
+  -ms-background-repeat: no-repeat;
+  -moz-background-repeat: no-repeat;
+  -o-background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-position: center center;
+  -ms-background-position: center center;
+  -moz-background-position: center center;
+  -o-background-position: center center;
   background-size: cover;
   -webkit-background-size: cover;
+  -ms-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-attachment: fixed;
@@ -275,9 +286,20 @@ body {
 }
 
 .about .imageBackground {
-  background: url(/static/background.png) no-repeat center center fixed;
+  background: url(/static/background.png);
+  background-repeat: no-repeat;
+  -webkit-background-repeat: no-repeat;
+  -ms-background-repeat: no-repeat;
+  -moz-background-repeat: no-repeat;
+  -o-background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-position: center center;
+  -ms-background-position: center center;
+  -moz-background-position: center center;
+  -o-background-position: center center;
   background-size: cover;
   -webkit-background-size: cover;
+  -ms-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-attachment: fixed;
@@ -446,9 +468,20 @@ body {
 }
 
 .contact .imageBackground {
-  background: url(/static/background2.png) no-repeat center center fixed;
+  background: url(/static/background2.png);
+  background-repeat: no-repeat;
+  -webkit-background-repeat: no-repeat;
+  -ms-background-repeat: no-repeat;
+  -moz-background-repeat: no-repeat;
+  -o-background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-position: center center;
+  -ms-background-position: center center;
+  -moz-background-position: center center;
+  -o-background-position: center center;
   background-size: cover;
   -webkit-background-size: cover;
+  -ms-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-attachment: fixed;
@@ -462,9 +495,7 @@ body {
 }
 
 .contact a {
-  margin-top: 30px;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin: 10px;
   height: 180px;
   width: 170px;
   border-radius: 30px;
@@ -581,6 +612,10 @@ body {
     -webkit-align-items: center;
     -ms-align-items: center;
     -o-align-items: center;
+  }
+
+  .contact {
+    flex-direction: column;
   }
 
   .about p {
